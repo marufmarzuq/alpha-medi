@@ -1,0 +1,18 @@
+.footer-copyright {
+     background-color: #029fc5;
+     color: white;
+     font-weight: 600;
+ }
+ .footer-content {
+     background-color: #029fc5de;
+     color: wheat;
+     padding: 40px;
+ }
+ .footer-content h2 {
+     margin-bottom: 25px;
+ }
+
+ footer a {
+      color: white;
+      text-decoration: none;
+ }
