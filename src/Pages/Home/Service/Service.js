@@ -9,7 +9,7 @@ const Service = ({ service }) => {
           <Col>
                <img className="service-img" src={imgURL} alt="" />
                <p className="service-title">{title}</p>
-               <Button className='service-btn' variant="outline-dark">See Details</Button>
+               <Button className='service-btn' variant="outline-primary">See Details</Button>
           </Col>
      );
 };

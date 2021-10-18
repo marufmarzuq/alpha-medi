@@ -15,7 +15,8 @@ const Services = () => {
           <section className="service-section" id="#services">
                <Container>
                     <Row>
-                         <h2 className='text-center py-5'>Our Services</h2>
+                         <p className="text-center services-text">SERVICES</p>
+                         <h2 className='text-center pb-5'>What You Can Do With AlphaMedi</h2>
                     </Row>
                     <Row xs={2} md={3} lg={3}>
                          {

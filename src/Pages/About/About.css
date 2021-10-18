@@ -1,0 +1,14 @@
+.about-img-text {
+     position: absolute;
+     bottom: 0;
+     background-color: white;
+     padding: 20px;
+     width: 85%;
+     left: 0;
+ }
+ .about-section {
+      padding: 50px 0;
+ }
+.about-page-title {
+     font-size: 40px;
+}
