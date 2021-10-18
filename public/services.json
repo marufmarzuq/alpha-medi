@@ -1,0 +1,37 @@
+[{
+     "id": 1,
+     "title": "Birthing Centers",
+     "imgURL": "https://i.ibb.co/xGrsy4X/birthcare.jpg",
+     "excerpt": "Whether you're a first-time or repeat mom, the maternity program offers continued care from the health care provider's office to the delivery room.",
+     "details": "You can feel confident that Mayo Clinic Health System will provide a safe and secure environment for you and your baby during your stay. The birth center is a locked facility so only authorized staff and visitors can enter the space. Staff wears unique uniforms and photo nametags so you know that those caring for you are birth center staff. Staff will confirm your identity to ensure you are paired with the correct newborn and that you both receive the appropriate care. Teleneonatology is one of the many ways Mayo Clinic extends knowledge and care to more people. Using real-time video technology, neonatologists ― pediatric specialists who assist with ill newborns and premature births ― at Mayo Clinic in Rochester can partner with local providers. Teleneonatology is used primarily during newborn resuscitation or helping diagnose unusual clinical cases."
+   }, {
+     "id": 2,
+     "title": "Heart Care",
+     "imgURL": "https://i.ibb.co/LhQ6Bs0/heartcare.jpg",
+     "excerpt": "Show your heart some love with personalized care that meets your exact needs. Mayo Clinic Health System is here to help you and your family prevent heart-based complications and provide lifesaving treatment when you need it most. Our cardiologists and heart care experts offer a range of services and clinics so that your care plan can be just as unique as you are. We bring the power of collaboration and the life-changing benefits of Mayo Clinic close to home. It’s heart care designed for you.",
+     "details": "While heart disease continues to be the nation’s No. 1 health problem, an estimated 80% of premature heart attacks and strokes are preventable. Understanding your risk factors is a key strategy for keeping your heart healthy. Our heart care experts offer regular blood pressure screenings and specialty lipid clinics to provide you with a comprehensive understanding of your risk factors and personalized counseling to help you achieve your heart health goals. When you need testing or early treatment of a heart problem, Mayo Clinic Health System offers a range of diagnostic tests and cardiac catheterization services. Diagnostic tests may be used to appropriately diagnose the cause of your symptoms and help your cardiology care team evaluate the best form of treatment for you."
+   }, {
+     "id": 3,
+     "title": "Emergencies",
+     "imgURL": "https://i.ibb.co/HHVL7Sg/emergencies.png",
+     "excerpt": "We are ready 24-hours a day to provide care for all types of emergencies. Our highly trained staff, along with our connection to thousands of Mayo Clinic experts, can provide quality emergency care, close to home.",
+     "details": "When you need testing or early treatment of a heart problem, Mayo Clinic Health System offers a range of diagnostic tests and cardiac catheterization services. Diagnostic tests may be used to appropriately diagnose the cause of your symptoms and help your cardiology care team evaluate the best form of treatment for you."
+   }, {
+     "id": 4,
+     "title": "Family Medicine",
+     "imgURL": "https://i.ibb.co/DRWWWSd/familymedicine.png",
+     "excerpt": "Family Medicine provides care for children and adults of all ages. Services include annual exams, well-child visits, diagnostics, screenings and connections and referrals to advanced care that meets your medical and personal needs.",
+     "details": "Teleneonatology is one of the many ways Mayo Clinic extends knowledge and care to more people. Using real-time video technology, neonatologists ― pediatric specialists who assist with ill newborns and premature births ― at Mayo Clinic in Rochester can partner with local providers. Teleneonatology is used primarily during newborn resuscitation or helping diagnose unusual clinical cases."
+   }, {
+     "id": 5,
+     "title": "Cancer Care",
+     "imgURL": "https://i.ibb.co/k9M3ccr/cancercare.jpg",
+     "excerpt": "Our team of experts focuses on the diagnosis, assessment and treatment of various types of cancer, as well as your health needs beyond cancer. We bring the knowledge of hundreds of Mayo Clinic cancer specialists — and the experience of treating more than a million patients — to your community.",
+     "details": "When you experience any sports-related injury or issue, Mayo Clinic Health System sports medicine can help you get back in action quickly — and at your peak performance level — through an integrated, efficient, team approach to care. Whether you’re on an athletic team or striving to improve your overall fitness, our sports medicine experts are ready to help you at every age, stage and ability."
+   }, {
+     "id": 6,
+     "title": "Orthopedics",
+     "imgURL": "https://i.ibb.co/4mxt9xt/Orthopedics.png",
+     "excerpt": "Whether you are seeking care for bones, muscles, ligaments, or tendons, Mayo Clinic Health System orthopedic specialists provide diagnosis and surgical and nonsurgical treatment options that can help you enjoy an active, pain-free life.",
+     "details": "Our highly-skilled team of physicians, advanced practice providers, therapists, and athletic trainers combine to deliver a seamless experience — from diagnosis, to treatment and rehabilitation — so you can get back to doing what you love. We've redesigned the orthopedic care experience and are proud to deliver one of the best programs where you can recover quicker, and leave the hospital as soon as possible. The result is a better overall joint replacement experience for you. When you experience any sports-related injury or issue, Mayo Clinic Health System sports medicine can help you get back in action quickly — and at your peak performance level — through an integrated, efficient, team approach to care. Whether you’re on an athletic team or striving to improve your overall fitness, our sports medicine experts are ready to help you at every age, stage and ability."
+   }]

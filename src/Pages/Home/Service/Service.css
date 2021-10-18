@@ -1,0 +1,17 @@
+.service-img {
+     width: 220px;
+     height: 220px;
+     object-fit: cover;
+     border-radius: 100%;
+ }
+ section.service-section .col {
+     text-align: center;
+     border: 1px solid #ddd;
+     padding: 20px;
+ }
+ p.service-title {
+     font-size: 25px;
+     font-weight: 600;
+     color: #333;
+     padding-top: 10px;
+ }

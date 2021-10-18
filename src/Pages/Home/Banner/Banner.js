@@ -12,8 +12,8 @@ const Banner = () => {
                          of what's possible <br />
                          for our patients
                     </h2>
-                    <Button variant="light" className="py-3 px-5 mt-3 banner-btn">
-                         <Link to="#services">Our Services</Link>
+                    <Button variant="outline-light" className="py-3 px-5 mt-3 banner-btn">
+                         <a href="#services">Our Services</a>
                     </Button>
                </Container>
           </div>

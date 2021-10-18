@@ -19,8 +19,11 @@
      font-weight: 700;
  }
  .banner-btn a {
-      color: black;
+      color: white;
       text-decoration: none;
+ }
+ .banner-btn:hover a{
+      color: rgb(0, 105, 175);
  }
 @media (max-width: 600px) {
      .banner-text {

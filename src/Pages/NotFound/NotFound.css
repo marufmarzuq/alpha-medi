@@ -1,0 +1,14 @@
+.not-found {
+     background-color: #166ae9;
+     overflow: hidden;
+ }
+ .not-found-img-container {
+     display: flex;
+     width: 100%;
+     min-height: 100vh;
+     justify-content: center;
+     align-items: center;
+ }
+ .not-found-img-container img {
+     width: 340px;
+ }
