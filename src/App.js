@@ -6,32 +6,35 @@ import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
+import AuthProvider from './Context/AuthProvider/AuthProvider';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Switch>
-          <Route exact path={["/", "/home"]}>
-            <Home></Home>
-          </Route>
-          <Route exact path="/about-us">
-            <About></About>
-          </Route>
-          <Route exact path="/contact">
-            <Contact></Contact>
-          </Route>
-          <Route exact path="/login">
-            <Login></Login>
-          </Route>
-          <Route exact path="/register">
-            <Register></Register>
-          </Route>
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path={["/", "/home"]}>
+              <Home></Home>
+            </Route>
+            <Route exact path="/about-us">
+              <About></About>
+            </Route>
+            <Route exact path="/contact">
+              <Contact></Contact>
+            </Route>
+            <Route exact path="/login">
+              <Login></Login>
+            </Route>
+            <Route exact path="/register">
+              <Register></Register>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
