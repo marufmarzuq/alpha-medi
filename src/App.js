@@ -5,6 +5,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import About from './Pages/About/About';
+import Contact from './Pages/Contact/Contact';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           </Route>
           <Route exact path="/about-us">
             <About></About>
+          </Route>
+          <Route exact path="/contact">
+            <Contact></Contact>
           </Route>
           <Route exact path="/login">
             <Login></Login>
