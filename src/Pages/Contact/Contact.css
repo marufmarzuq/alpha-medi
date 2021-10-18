@@ -2,7 +2,6 @@
      padding: 25px;
      text-align: center;
  }
- .contact .card i {
-     font-size: 60px;
- }
-
+.contact i {
+    font-size: 65px;
+}
