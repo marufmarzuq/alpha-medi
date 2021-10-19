@@ -15,7 +15,7 @@ const Header = () => {
                          <Nav className="ms-auto">
                               <Link to="/home">Home</Link>
                               <Link to="/about-us">About Us</Link>
-                              <Link to="/blog">Blog</Link>
+                              <Link to="/faq">FAQ</Link>
                               <Link to="/contact">Contact</Link>
                               <span className="user-name">{ user?.displayName }</span>
                               {user?.email ? <Link to="/" className="btn-link" onClick={logOut}>Log out</Link> : <Link to="/login" className="btn-link">Login</Link>}

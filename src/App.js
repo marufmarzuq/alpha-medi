@@ -9,6 +9,7 @@ import Contact from './Pages/Contact/Contact';
 import AuthProvider from './Context/AuthProvider/AuthProvider';
 import ServiceDetails from './Pages/ServiceDetails/ServiceDetails';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import Faq from './Pages/Faq/Faq';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
             </Route>
             <Route exact path="/about-us">
               <About></About>
+            </Route>
+            <Route exact path="/faq">
+              <Faq></Faq>
             </Route>
             <Route exact path="/contact">
               <Contact></Contact>
