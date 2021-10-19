@@ -8,7 +8,7 @@ const Footer = () => {
                <div className="footer-content">
                     <div className="container">
                          <div className="row">
-                              <div className="col">
+                              <div className="col-md-3 col-sm-6">
                                    <h2>About Us</h2>
                                    <p>
                                         <Link to="#">Our Mission & Values</Link> <br />
@@ -18,7 +18,7 @@ const Footer = () => {
                                         <Link to="#">Diversity is Our Specialty</Link> <br />
                                    </p>
                               </div>
-                              <div className="col">
+                              <div className="col-md-3 col-sm-6">
                                    <h2>Services</h2>
                                    <p>
                                         <Link to="#">Dental Dictionary</Link> <br />
@@ -28,7 +28,7 @@ const Footer = () => {
                                         <Link to="#">Sedation Dentistry</Link>
                                    </p>
                               </div>
-                              <div className="col">
+                              <div className="col-md-3 col-sm-6">
                                    <h2>Resources</h2>
                                    <p>
                                         <Link to="#">New Patients</Link> <br />
@@ -38,7 +38,7 @@ const Footer = () => {
                                         <Link to="#">Account Login</Link> <br />
                                    </p>
                               </div>
-                              <div className="col">
+                              <div className="col-md-3 col-sm-6">
                                    <h2>Our Address</h2>
                                    <p>
                                    Datobbo Dentistry 5212 Cedar <br />

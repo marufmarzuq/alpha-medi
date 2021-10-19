@@ -9,19 +9,34 @@ const Header = () => {
      const { user, logOut } = useAuth();
      return (
           <header>
-               <Navbar bg="primary" variant="dark">
-                    <Container>
-                         <Navbar.Brand href="/"><img className="app-logo" src={logo} alt="" /></Navbar.Brand>
-                         <Nav className="ms-auto">
-                              <Link to="/home">Home</Link>
-                              <Link to="/about-us">About Us</Link>
-                              <Link to="/faq">FAQ</Link>
-                              <Link to="/contact">Contact</Link>
-                              <span className="user-name">{ user?.displayName }</span>
-                              {user?.email ? <Link to="/" className="btn-link" onClick={logOut}>Log out</Link> : <Link to="/login" className="btn-link">Login</Link>}
-                         </Nav>
-                    </Container>
-               </Navbar>
+               <nav className="navbar navbar-dark bg-primary navbar-expand-lg">
+  <div className="container">
+    <a className="navbar-brand" href="/"><img className="app-logo" src={logo} alt="" /></a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/about-us">About Us</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/faq">FAQ</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" aria-current="page" to="/contact">Contact</Link>
+        </li>
+          <li>
+               <span className="user-name">{ user?.displayName }</span>
+               {user?.email ? <Link to="/" className="btn-link" onClick={logOut}>Log out</Link> : <Link to="/login" className="btn-link">Login</Link>}
+        </li>
+     </ul>
+    </div>
+  </div>
+</nav>
           </header>
      );
 };
