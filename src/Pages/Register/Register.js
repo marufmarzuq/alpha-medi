@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
@@ -7,7 +7,8 @@ import Header from '../../Shared/Header/Header';
 const Register = () => {
      const [email, setEmail] = useState('')
      const [password, setPassword] = useState('')
-     const { createAccountWithEmailPassword, auth } = useAuth();
+     const { createAccountWithEmailPassword, auth, setUser } = useAuth();
+     const history = useHistory();
      const handleEmail = (e) => {
           setEmail(e.target.value)
      }
@@ -17,6 +18,12 @@ const Register = () => {
      const handleRegistration = e => {
           e.preventDefault();
           createAccountWithEmailPassword(auth, email, password)
+          .then(result => {
+               const user = result.user;
+               console.log(user)
+               setUser('')
+               history.push("/login");
+          })
      }
      return (
           <>

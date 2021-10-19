@@ -12,13 +12,8 @@ const useFirebase = () => {
      const googleProvider = new GoogleAuthProvider();
 
      const createAccountWithEmailPassword = (auth, email, password) => {
-          createUserWithEmailAndPassword(auth, email, password)
-          .then(result => {
-               const user = result.user;
-          })
-          .catch((error) => {
-          const errorMessage = error.message;
-          });
+          setIsLoading(false)
+          return createUserWithEmailAndPassword(auth, email, password)
      }
 
      const loginWithEmailPassword = (auth, email, password) => {
