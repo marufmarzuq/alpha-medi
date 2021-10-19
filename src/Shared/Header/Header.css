@@ -13,3 +13,8 @@ header a {
  .navbar-nav {
      align-items: center;
  }
+ .user-name {
+    color: white;
+    margin: 0 8px 0 0px;
+    font-weight: 700;
+}

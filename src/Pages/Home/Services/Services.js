@@ -10,7 +10,6 @@ const Services = () => {
                .then(res => res.json())
           .then(data=> setServices(data))
      }, [])
-     console.log(services)
      return (
           <section className="service-section" id="#services">
                <Container>
