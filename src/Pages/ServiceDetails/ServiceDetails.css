@@ -1,0 +1,8 @@
+.service-details-page .container {
+     padding: 50px 0;
+     max-width: 1000px;
+ }
+ .service-details-img {
+     padding: 20px;
+     border: 2px solid #ddd;
+ }

@@ -5,7 +5,6 @@ import './Service.css'
 
 const Service = ({ service }) => {
      const { imgURL, title, id } = service;
-     console.log(service)
      return (
           <Col>
                <img className="service-img" src={imgURL} alt="" />
