@@ -1,12 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import { Link, useLocation, useHistory } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import "./Login.css"
 
 const Login = () => {
-     const { signInUsingGoogle } = useFirebase();
+     const {setError,
+          signInUsingGoogle,
+          setUser } = useAuth();
+     const location = useLocation();
+     const history = useHistory();
+     const redirectURI = location.state?.from || '/'
+     console.log(location.state?.from)
+     const handleLogin = () => {
+          signInUsingGoogle()
+          .then(result => {
+               setUser(result.user);
+               history.push(redirectURI);
+          })
+          .catch(error => {
+          setError(error.message)
+          })
+     }
      return (
           <>
                <Header></Header>
@@ -26,7 +42,7 @@ const Login = () => {
                               </form>
                               <hr />
                               <p className="text-center">or</p>
-                              <button type="submit" className="btn btn-outline-dark w-100" onClick={signInUsingGoogle}>Log in with Gmail</button>
+                              <button type="submit" className="btn btn-outline-dark w-100" onClick={handleLogin}>Log in with Gmail</button>
                               <p className="pt-4">Don’t have an account yet? <Link to="/register">register</Link></p>
                          </div>
                     </div>
