@@ -3,6 +3,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Header.css'
+import logo from '../../images/logo.png'
 
 const Header = () => {
      const { user, logOut } = useAuth();
@@ -10,7 +11,7 @@ const Header = () => {
           <header>
                <Navbar bg="primary" variant="dark">
                     <Container>
-                         <Navbar.Brand href="/">AlphaMedi</Navbar.Brand>
+                         <Navbar.Brand href="/"><img className="app-logo" src={logo} alt="" /></Navbar.Brand>
                          <Nav className="ms-auto">
                               <Link to="/home">Home</Link>
                               <Link to="/about-us">About Us</Link>
