@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import Footer from '../../Shared/Footer/Footer';
@@ -6,14 +6,18 @@ import Header from '../../Shared/Header/Header';
 import "./Login.css"
 
 const Login = () => {
+     const [email, setEmail] = useState('')
+     const [password, setPassword] = useState('')
      const {setError,
           signInUsingGoogle,
-          setUser } = useAuth();
+          setUser,
+          loginWithEmailPassword,
+          auth } = useAuth();
      const location = useLocation();
      const history = useHistory();
      const redirectURI = location.state?.from || '/'
      console.log(location.state?.from)
-     const handleLogin = () => {
+     const handleGoogleLogin = () => {
           signInUsingGoogle()
           .then(result => {
                setUser(result.user);
@@ -23,26 +27,47 @@ const Login = () => {
           setError(error.message)
           })
      }
+
+     const handleEmail = (e) => {
+          setEmail(e.target.value)
+     }
+     const handlePassword = (e) => {
+          setPassword(e.target.value)
+     }
+     const handlePasswordLogin = (e) => {
+          e.preventDefault();
+          console.log(email, password)
+          loginWithEmailPassword(auth, email, password)
+          .then(result => {
+               const user = result.user;
+               setUser(user);
+               history.push(redirectURI);
+          })
+          .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          });
+     }
      return (
           <>
                <Header></Header>
                <div className="login">
                     <div className="container d-flex justify-content-center">
                          <div className="form-container">
-                         <form>
+                         <form onSubmit={handlePasswordLogin}>
                               <div className="mb-3">
                               <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                              <input onBlur={handleEmail} type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                               </div>
                               <div className="mb-3">
                               <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                              <input type="password" className="form-control" id="exampleInputPassword1"/>
+                              <input onBlur={handlePassword} type="password" className="form-control" id="exampleInputPassword1"/>
                               </div>
                               <button type="submit" className="btn btn-dark">Log in</button>
                               </form>
                               <hr />
                               <p className="text-center">or</p>
-                              <button type="submit" className="btn btn-outline-dark w-100" onClick={handleLogin}>Log in with Gmail</button>
+                              <button type="submit" className="btn btn-outline-dark w-100" onClick={handleGoogleLogin}>Log in with Gmail</button>
                               <p className="pt-4">Don’t have an account yet? <Link to="/register">register</Link></p>
                          </div>
                     </div>
