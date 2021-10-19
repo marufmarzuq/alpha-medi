@@ -16,7 +16,6 @@ const Register = () => {
      }
      const handleRegistration = e => {
           e.preventDefault();
-          console.log(email, password)
           createAccountWithEmailPassword(auth, email, password)
      }
      return (

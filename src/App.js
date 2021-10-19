@@ -10,12 +10,14 @@ import AuthProvider from './Context/AuthProvider/AuthProvider';
 import ServiceDetails from './Pages/ServiceDetails/ServiceDetails';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Faq from './Pages/Faq/Faq';
+import ScrollToTop from './Shared/ScrollToTop';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <BrowserRouter>
+          <ScrollToTop/>
           <Switch>
             <Route exact path={["/", "/home"]}>
               <Home></Home>
