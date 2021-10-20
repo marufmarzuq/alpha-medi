@@ -8,8 +8,8 @@ import "./Login.css"
 const Login = () => {
      const [email, setEmail] = useState('')
      const [password, setPassword] = useState('')
-     const {setError,
-          signInUsingGoogle,
+     const [error, setError] = useState('');
+     const {signInUsingGoogle,
           setUser,
           loginWithEmailPassword,
           setIsLoading,
@@ -44,10 +44,10 @@ const Login = () => {
                const user = result.user;
                setUser(user);
                history.push(redirectURI);
+               setError("")
           })
           .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
+               setError(error.message)
           })
           .finally(()=> setIsLoading(false))
      }
@@ -66,6 +66,7 @@ const Login = () => {
                               <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                               <input onBlur={handlePassword} type="password" className="form-control" id="exampleInputPassword1"/>
                               </div>
+                              <p className="text-danger">{ error}</p>
                               <button type="submit" className="btn btn-dark">Log in</button>
                               </form>
                               <hr />

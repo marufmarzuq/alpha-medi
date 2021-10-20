@@ -6,9 +6,10 @@ import Header from '../../Shared/Header/Header';
 import "./Register.css"
 
 const Register = () => {
-     const [email, setEmail] = useState('')
-     const [password, setPassword] = useState('')
-     const [name, setName] = useState('')
+     const [email, setEmail] = useState('');
+     const [password, setPassword] = useState('');
+     const [name, setName] = useState('');
+     const [error, setError] = useState('');
      const { createAccountWithEmailPassword, auth, setUser, updateProfile  } = useAuth();
      const history = useHistory();
      const handleName = (e) => {
@@ -22,20 +23,26 @@ const Register = () => {
      }
      const handleRegistration = e => {
           e.preventDefault();
+          if (password.length < 6) {
+               setError('Password should be at least 6 characters long')
+               return
+          }
           createAccountWithEmailPassword(auth, email, password)
           .then(result => {
-               const user = result.user;
-               console.log(user);
                setUser('');
                setUserName();
                history.push("/login");
           })
+          .catch((error) => {
+               setError(error.message)
+             });
      }
      const setUserName = () => {
           updateProfile(auth.currentUser, {
                displayName: name
           })
-               .then((result) => { })
+          .then((result) => {
+          })
      }
      return (
           <>
@@ -56,6 +63,7 @@ const Register = () => {
                          <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
                          <input onBlur={handlePassword} type="password" className="form-control" id="exampleInputPassword1" required/>
                          </div>
+                         <p className="text-danger">{ error}</p>
                          <button type="submit" className="btn btn-dark">Register</button>
                     </form>
                          <hr />

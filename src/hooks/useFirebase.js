@@ -50,7 +50,6 @@ const useFirebase = () => {
           signInUsingGoogle,
           logOut,
           setUser,
-          setError,
           createAccountWithEmailPassword,
           loginWithEmailPassword,
           auth,
