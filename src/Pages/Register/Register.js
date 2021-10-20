@@ -3,12 +3,17 @@ import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
+import "./Register.css"
 
 const Register = () => {
      const [email, setEmail] = useState('')
      const [password, setPassword] = useState('')
-     const { createAccountWithEmailPassword, auth, setUser } = useAuth();
+     const [name, setName] = useState('')
+     const { createAccountWithEmailPassword, auth, setUser, updateProfile  } = useAuth();
      const history = useHistory();
+     const handleName = (e) => {
+          setName(e.target.value)
+     }
      const handleEmail = (e) => {
           setEmail(e.target.value)
      }
@@ -20,21 +25,28 @@ const Register = () => {
           createAccountWithEmailPassword(auth, email, password)
           .then(result => {
                const user = result.user;
-               console.log(user)
-               setUser('')
+               console.log(user);
+               setUser('');
+               setUserName();
                history.push("/login");
           })
+     }
+     const setUserName = () => {
+          updateProfile(auth.currentUser, {
+               displayName: name
+          })
+               .then((result) => { })
      }
      return (
           <>
           <Header></Header>
-          <div className="login">
+          <div className="register">
                <div className="container d-flex justify-content-center">
                     <div className="form-container">
                     <form onSubmit={handleRegistration}>
                          <div className="mb-3">
                          <label htmlFor="fullname" className="form-label">Full Name</label>
-                         <input type="text" className="form-control" id="fullname" aria-describedby="emailHelp" required/>
+                         <input onBlur={handleName} type="text" className="form-control" id="fullname" aria-describedby="emailHelp" required/>
                          </div>
                          <div className="mb-3">
                          <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>

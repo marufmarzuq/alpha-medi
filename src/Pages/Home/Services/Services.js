@@ -17,7 +17,7 @@ const Services = () => {
                          <p className="text-center services-text">SERVICES</p>
                          <h2 className='text-center pb-5'>What You Can Do With AlphaMedi</h2>
                     </Row>
-                    <Row xs={2} md={3} lg={3}>
+                    <Row xs={1} md={3} lg={3}>
                          {
                               services.map(service => <Service key={service.id} service={service}></Service>)
                          }

@@ -52,7 +52,7 @@ const Footer = () => {
                     </div>
                </div>
                <div className="footer-copyright text-center py-3">
-                    &copy; Copyright by Maruf Marzuq - 2021
+                    &copy; Copyright by Alpha Medi - 2021
                </div>
           </footer>
      );
